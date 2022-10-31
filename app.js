@@ -8,13 +8,23 @@
 window.onload = () => {
     main()
 }
+// document.addEventListener("click", function () {
+//     main();
+// })
 
 function main() {
     const root = document.getElementById("root");
     const btn = document.getElementById("change-btn");
     btn.addEventListener("click", function () {
         const bgColor = generateRGBColor();
+        // console.log(bgColor);
         root.style.backgroundColor = bgColor;
+        const colorCode = document.getElementById("color-code");
+        colorCode.innerText = '';
+        const p = document.createElement("p");
+        p.innerText = bgColor;
+        colorCode.appendChild(p);
+
     })
 }
 
