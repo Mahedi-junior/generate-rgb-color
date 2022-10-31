@@ -3,6 +3,16 @@
 1. Change the background color by generating random rgb color by clicking a button
 
 */
+
+const myInterval = setInterval(myTimer, 1000);
+
+function myTimer() {
+    const date = new Date();
+    document.getElementById("demo").innerHTML = date.toLocaleTimeString();
+}
+
+
+
 // steps
 // 1. create onload handler
 window.onload = () => {
